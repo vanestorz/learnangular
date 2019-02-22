@@ -3,7 +3,7 @@ pipeline{
   tools {nodejs "node"}
   node{
     stage('SCM Checkout'){
-      git 'https://github.com/vanestorz/learnangular'
+      checkout scm
     }
   }
     stages{
