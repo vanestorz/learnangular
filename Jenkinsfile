@@ -1,15 +1,20 @@
-node{
-  stage('SCM Checkout'){
-    git 'https://github.com/vanestorz/learnangular'
-  }
-  stage('Prepare Environment'){
-    git branch:'master',url:'https://github.com/vanestorz/learnangular'
-    sh 'npm install'
-  }
-  stage('Build'){
-    echo "Success!"
-  }
-  stage('Deploy'){
-    echo "Success!"
+pipeline{
+  agent any
+
+   tools {nodejs "NodeJS"}
+  node{
+    stage('SCM Checkout'){
+      git 'https://github.com/vanestorz/learnangular'
+    }
+    stage('Prepare Environment'){
+      git branch:'master',url:'https://github.com/vanestorz/learnangular'
+      sh 'npm install'
+    }
+    stage('Build'){
+      echo "Success!"
+    }
+    stage('Deploy'){
+      echo "Success!"
+    }
   }
 }
