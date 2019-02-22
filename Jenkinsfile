@@ -1,8 +1,8 @@
 pipeline{
   agent any
   tools {nodejs "node"}
-  stages{
-    node{
+  node{
+    stages{
       stage('SCM Checkout'){
         git 'https://github.com/vanestorz/learnangular'
       }
@@ -16,6 +16,6 @@ pipeline{
       stage('Deploy'){
         echo "Success!"
       }
-    }
+    }  
   }
 }
