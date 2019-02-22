@@ -10,7 +10,7 @@ pipeline{
       }
       stage('Build'){
         steps{
-          echo "Success!"
+          sh 'ng build --prod'
         }
       }
       stage('Deploy'){
