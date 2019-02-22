@@ -8,14 +8,20 @@ pipeline{
   }
     stages{
       stage('Prepare Environment'){
-        git branch:'master',url:'https://github.com/vanestorz/learnangular'
-        sh 'npm install'
+        steps{
+          git branch:'master',url:'https://github.com/vanestorz/learnangular'
+          sh 'npm install'
+        }
       }
       stage('Build'){
-        echo "Success!"
+        steps{
+          echo "Success!"
+        }
       }
       stage('Deploy'){
-        echo "Success!"
+        steps{
+          echo "Success!"
+        }
       }
     }  
 }
