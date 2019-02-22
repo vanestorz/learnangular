@@ -1,4 +1,4 @@
-# Belajar Angular 7
+# Belajar Angular 7 - Andhika H. Santoso
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
 
